@@ -6,8 +6,13 @@
 
 <script>
 
+import { removeToken } from './utils/auth'
+
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    // removeToken()
+  }
 }
 </script>
 

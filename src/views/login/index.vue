@@ -36,9 +36,6 @@ import {
   validateNotNull
 } from '../../validate'
 import {
-  login
-} from '../../api/login'
-import {
   draw
 } from '../../utils/validateCode'
 
@@ -48,8 +45,8 @@ export default {
   name: 'Index',
   data() {
     return {
-      username: '13968137471',
-      password: '111111',
+      username: '',
+      password: '',
       code: ''
     }
   },
@@ -64,24 +61,14 @@ export default {
       try {
         await validateNotNull(this.username, '用户名不能为空')
         await validateNotNull(this.password, '密码不能为空')
-        await this.validateCode()
-        const result = await login({
-          username: this.username,
-          password: this.password
-        })
-        this.$message.success('登入成功')
-
-        setToken(result.data.token)
-
-        if (result.data.status === 1) {
-          this.$router.replace({
-            path: '/admin-data'
+        if (this.username === 'admin' && this.password === '123456') {
+          setToken(Math.random())
+          this.$router.push({
+            path: '/'
           })
-          return
+        } else {
+          this.$message.warning('账号或密码错误')
         }
-        this.$router.push({
-          path: '/'
-        })
       } catch (e) {
         console.log(e)
       }

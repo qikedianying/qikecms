@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div>欢迎登入亿业云企业后台管理系统</div>
+    <div>欢迎登入契客大帝国</div>
     <!--<div class="font-14-333 full-width mb20 flex">-->
       <!--<label> 关键词：<input v-model="keyword"></label>-->
 

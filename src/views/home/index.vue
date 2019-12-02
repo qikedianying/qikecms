@@ -13,21 +13,12 @@
         :unique-opened="true"
         @select="select"
       >
-        <el-submenu index="1">
+        <el-menu-item index="/movie">
           <template slot="title">
-            <i class="el-icon-goods" />
-            <span>产业设置</span>
+            <i class="el-icon-goods"></i>
+            <span>电影管理</span>
           </template>
-          <el-menu-item index="/industry">产业介绍</el-menu-item>
-          <el-menu-item index="/tourism">旅游介绍</el-menu-item>
-        </el-submenu>
-        <el-submenu index="2">
-          <template slot="title">
-            <i class="el-icon-menu" />
-            <span>账号设置</span>
-          </template>
-          <el-menu-item index="/account">账号设置</el-menu-item>
-        </el-submenu>
+        </el-menu-item>
         <!--<el-menu-item index="/account">-->
           <!--<template slot="title">-->
             <!--<i class="el-icon-menu" />-->

@@ -9,24 +9,12 @@ export default new Router({
       component: () => import('../views/login')
     },
     {
-      path: '/admin-data',
-      component: () => import('../views/login/admin-data')
-    },
-    {
       path: '/',
       component: () => import('../views/home'),
       children: [
         {
-          path: '/industry',
-          component: () => import('@/views/industry-set/industry')
-        },
-        {
-          path: '/tourism',
-          component: () => import('@/views/industry-set/tourism')
-        },
-        {
-          path: '/account',
-          component: () => import('@/views/account-set')
+          path: '/movie',
+          component: () => import('../views/movie')
         }
       ]
     }

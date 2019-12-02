@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 
-export function createAccount(data) {
+export function addArticle(data) {
   return request({
-    url: `app/admin/account/createAccount`,
+    url: 'article/add',
     method: 'post',
     data
   })
