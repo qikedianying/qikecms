@@ -88,7 +88,7 @@ export default {
         address: '',
         movieLength: '',
         releaseTime: '',
-        type: '2',
+        type: '-1',
         releaseCountry: ''
       }
     }
